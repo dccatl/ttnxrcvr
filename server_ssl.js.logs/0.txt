@@ -1,0 +1,365 @@
+>>>> iisnode truncated the log file because it exceeded the configured maximum size
+192.119.176.166 - - [Mon, 01 Feb 2016 20:39:19 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"b6f2f721-ae90-4f80-b081-e41f6eb5cc14","type":"reading","timestamp":"2016-02-01T20:39:20.338+0000","data":{"gps_longitude":"-94.4325221","device_type":"calamp","gps_number_of_satellites":"11","event_timestamp":"2016-02-01T20:38:48.000+0000","device_port":"30135","raw_payload":"8308352648064032451f01020102004e56afc25856afb6ad1711493cc7b6bd9b00005af10000000000330b260000ff8f00080e082f3202000000000000003144","device_name":"352648064032451","event_type":"ignition_off","digital_input_03":"1","event_code":"50","digital_input_02":"1","seq_num_msb":"0","seq_num_lsb":"78","gps_altitude":"23281","ignition":"0","gps_fix_type":"2","event_parse_method":"binary","accumulator_01":"0","accumulator_02":"12612","digital_input_05":"0","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:38:48.000+0000","digital_input_06":"0","gps_speed":"0.0","raw_payload_size":"64","sequence_number":"78","device_ip":"12.129.110.18","event_timestamp_source":"rtc_timestamp","service_type":"1","gps_timestamp":"2016-02-01T19:49:01.000+0000","gps_latitude":"38.700882799999995","gps_heading":"51","device_name_type":"imei","cellular_rssi":"-113"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648064032451
+Time:= 2016-02-01T19:49:01.000+0000
+Lat:= 38.700882799999995
+Lon:= -94.4325221
+Heading:= 51
+Alt:= 23281
+Speed:= 0.0
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( 'b6f2f721-ae90-4f80-b081-e41f6eb5cc14', '2016-02-01T20:39:20.338+0000', '38.700882799999995', '-94.4325221', '352648064032451', '2016-02-01T19:49:01.000+0000', '51', '0.0', '23281', '-113', 'calamp', '1', 'ignition_off', '0', NULL, '50', '1', '1', '2', '0.8', '11', '78', '0', '12612', '2016-02-01T20:38:48.000+0000', '1', '0', '0', '78', 'imei', '30135', '12.129.110.18', (select deviceid from tbldevice where esn = '352648064032451'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:39:27 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"e1fcbfd1-d218-4d09-86d6-a39412cec0ce","type":"reading","timestamp":"2016-02-01T20:39:28.232+0000","data":{"gps_longitude":"-94.451751","device_type":"calamp","gps_number_of_satellites":"10","event_timestamp":"2016-02-01T20:39:27.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102094556afc27f56afc27f17143d7cc7b3ce7a000069840000082300920a00019affb34f081f00252d0200000000b200003833","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"69","gps_altitude":"27012","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"178","accumulator_02":"14387","digital_input_05":"1","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:39:27.000+0000","digital_input_06":"0","gps_speed":"46.5953829207","raw_payload_size":"64","sequence_number":"2373","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:39:27.000+0000","gps_latitude":"38.7202428","gps_heading":"146","device_name_type":"imei","cellular_rssi":"-77"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:39:27.000+0000
+Lat:= 38.7202428
+Lon:= -94.451751
+Heading:= 146
+Alt:= 27012
+Speed:= 46.5953829207
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( 'e1fcbfd1-d218-4d09-86d6-a39412cec0ce', '2016-02-01T20:39:28.232+0000', '38.7202428', '-94.451751', '352648068812866', '2016-02-01T20:39:27.000+0000', '146', '46.5953829207', '27012', '-77', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '0.8', '10', '69', '178', '14387', '2016-02-01T20:39:27.000+0000', '1', '1', '0', '2373', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:39:37 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"1cc0ac8c-0b11-40d0-beba-3d63dedcfb1e","type":"reading","timestamp":"2016-02-01T20:39:38.284+0000","data":{"gps_longitude":"-94.450302","device_type":"calamp","gps_number_of_satellites":"10","event_timestamp":"2016-02-01T20:39:37.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102094656afc28956afc289171400cdc7b40714000068fd000008a800900a00019affa14f081f00252d0200000000bc00003814","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"70","gps_altitude":"26877","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"188","accumulator_02":"14356","digital_input_05":"1","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:39:37.000+0000","digital_input_06":"0","gps_speed":"49.5705081864","raw_payload_size":"64","sequence_number":"2374","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:39:37.000+0000","gps_latitude":"38.7186893","gps_heading":"144","device_name_type":"imei","cellular_rssi":"-95"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:39:37.000+0000
+Lat:= 38.7186893
+Lon:= -94.450302
+Heading:= 144
+Alt:= 26877
+Speed:= 49.5705081864
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '1cc0ac8c-0b11-40d0-beba-3d63dedcfb1e', '2016-02-01T20:39:38.284+0000', '38.7186893', '-94.450302', '352648068812866', '2016-02-01T20:39:37.000+0000', '144', '49.5705081864', '26877', '-95', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '0.8', '10', '70', '188', '14356', '2016-02-01T20:39:37.000+0000', '1', '1', '0', '2374', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:39:47 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"eb476e6b-b9cf-4268-a672-79828a100554","type":"reading","timestamp":"2016-02-01T20:39:48.216+0000","data":{"gps_longitude":"-94.4487515","device_type":"calamp","gps_number_of_satellites":"9","event_timestamp":"2016-02-01T20:39:47.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102094756afc29356afc2931713be0ec7b443a5000068b70000093b00910900019affa54f081f00252d0200000000c6000037dc","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"71","gps_altitude":"26807","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"198","accumulator_02":"14300","digital_input_05":"1","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:39:47.000+0000","digital_input_06":"0","gps_speed":"52.8588045327","raw_payload_size":"64","sequence_number":"2375","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:39:47.000+0000","gps_latitude":"38.7169806","gps_heading":"145","device_name_type":"imei","cellular_rssi":"-91"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:39:47.000+0000
+Lat:= 38.7169806
+Lon:= -94.4487515
+Heading:= 145
+Alt:= 26807
+Speed:= 52.8588045327
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( 'eb476e6b-b9cf-4268-a672-79828a100554', '2016-02-01T20:39:48.216+0000', '38.7169806', '-94.4487515', '352648068812866', '2016-02-01T20:39:47.000+0000', '145', '52.8588045327', '26807', '-91', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '0.8', '9', '71', '198', '14300', '2016-02-01T20:39:47.000+0000', '1', '1', '0', '2375', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:39:57 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"463f8f41-4fae-4896-9210-8a7aa11f8082","type":"reading","timestamp":"2016-02-01T20:39:58.175+0000","data":{"gps_longitude":"-94.447077","device_type":"calamp","gps_number_of_satellites":"10","event_timestamp":"2016-02-01T20:39:57.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102094856afc29d56afc29d1713785dc7b4850e000064c9000009e200900a00019affb14f081f00252d0200000000d000003836","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"72","gps_altitude":"25801","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"208","accumulator_02":"14390","digital_input_05":"1","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:39:57.000+0000","digital_input_06":"0","gps_speed":"56.594488137","raw_payload_size":"64","sequence_number":"2376","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:39:57.000+0000","gps_latitude":"38.7151965","gps_heading":"144","device_name_type":"imei","cellular_rssi":"-79"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:39:57.000+0000
+Lat:= 38.7151965
+Lon:= -94.447077
+Heading:= 144
+Alt:= 25801
+Speed:= 56.594488137
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '463f8f41-4fae-4896-9210-8a7aa11f8082', '2016-02-01T20:39:58.175+0000', '38.7151965', '-94.447077', '352648068812866', '2016-02-01T20:39:57.000+0000', '144', '56.594488137', '25801', '-79', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '0.8', '10', '72', '208', '14390', '2016-02-01T20:39:57.000+0000', '1', '1', '0', '2376', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:40:07 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"dc78ed8c-3ebc-47aa-8f48-0d9462476112","type":"reading","timestamp":"2016-02-01T20:40:08.216+0000","data":{"gps_longitude":"-94.4454255","device_type":"calamp","gps_number_of_satellites":"9","event_timestamp":"2016-02-01T20:40:07.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102094956afc2a756afc2a717133370c7b4c591000065730000091a00900900019affab4f081f00252d0200000000da000037dc","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"73","gps_altitude":"25971","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"218","accumulator_02":"14300","digital_input_05":"1","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:40:07.000+0000","digital_input_06":"0","gps_speed":"52.120615556999994","raw_payload_size":"64","sequence_number":"2377","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:40:07.000+0000","gps_latitude":"38.713432","gps_heading":"144","device_name_type":"imei","cellular_rssi":"-85"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:40:07.000+0000
+Lat:= 38.713432
+Lon:= -94.4454255
+Heading:= 144
+Alt:= 25971
+Speed:= 52.120615556999994
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( 'dc78ed8c-3ebc-47aa-8f48-0d9462476112', '2016-02-01T20:40:08.216+0000', '38.713432', '-94.4454255', '352648068812866', '2016-02-01T20:40:07.000+0000', '144', '52.120615556999994', '25971', '-85', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '0.8', '9', '73', '218', '14300', '2016-02-01T20:40:07.000+0000', '1', '1', '0', '2377', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:40:16 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"610e6921-dd04-4d46-a102-cb1426686c29","type":"reading","timestamp":"2016-02-01T20:40:16.582+0000","data":{"gps_longitude":"-71.5785358","device_type":"calamp","gps_number_of_satellites":"8","event_timestamp":"2016-02-01T20:40:14.000+0000","device_port":"3769","raw_payload":"8308358901049307280f0102010200d556afc2ae56afc2ae18e7e388d555fb7200002946000001d200440800019aff974f0a0100252d020000000010000036a0","device_name":"358901049307280","event_type":"ignition_on","digital_input_03":"0","event_code":"45","digital_input_02":"0","seq_num_msb":"0","seq_num_lsb":"-43","gps_altitude":"10566","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"16","accumulator_02":"13984","digital_input_05":"0","gps_hdop":"1.0","digital_input_04":"0","message_type":"2","rtc_timestamp":"2016-02-01T20:40:14.000+0000","digital_input_06":"0","gps_speed":"10.4241231114","raw_payload_size":"64","sequence_number":"213","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:40:14.000+0000","gps_latitude":"41.785024799999995","gps_heading":"68","device_name_type":"imei","cellular_rssi":"-105"},"headers":{}}
+Parsed data:
+================================================
+Device:= 358901049307280
+Time:= 2016-02-01T20:40:14.000+0000
+Lat:= 41.785024799999995
+Lon:= -71.5785358
+Heading:= 68
+Alt:= 10566
+Speed:= 10.4241231114
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '610e6921-dd04-4d46-a102-cb1426686c29', '2016-02-01T20:40:16.582+0000', '41.785024799999995', '-71.5785358', '358901049307280', '2016-02-01T20:40:14.000+0000', '68', '10.4241231114', '10566', '-105', 'calamp', '1', 'ignition_on', '0', NULL, '45', '0', '0', '1', '1.0', '8', '-43', '16', '13984', '2016-02-01T20:40:14.000+0000', '0', '0', '0', '213', 'imei', '3769', '12.129.110.18', (select deviceid from tbldevice where esn = '358901049307280'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:40:17 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"15fb5694-d497-4869-869b-c4a245e33a4b","type":"reading","timestamp":"2016-02-01T20:40:18.138+0000","data":{"gps_longitude":"-94.44383549999999","device_type":"calamp","gps_number_of_satellites":"9","event_timestamp":"2016-02-01T20:40:17.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102094a56afc2b156afc2b11712f009c7b503ad0000659d0000094c00910900019affa34f081f00252d0200000000e400003801","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"74","gps_altitude":"26013","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"228","accumulator_02":"14337","digital_input_05":"1","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:40:17.000+0000","digital_input_06":"0","gps_speed":"53.239083701999995","raw_payload_size":"64","sequence_number":"2378","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:40:17.000+0000","gps_latitude":"38.7117065","gps_heading":"145","device_name_type":"imei","cellular_rssi":"-93"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:40:17.000+0000
+Lat:= 38.7117065
+Lon:= -94.44383549999999
+Heading:= 145
+Alt:= 26013
+Speed:= 53.239083701999995
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '15fb5694-d497-4869-869b-c4a245e33a4b', '2016-02-01T20:40:18.138+0000', '38.7117065', '-94.44383549999999', '352648068812866', '2016-02-01T20:40:17.000+0000', '145', '53.239083701999995', '26013', '-93', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '0.8', '9', '74', '228', '14337', '2016-02-01T20:40:17.000+0000', '1', '1', '0', '2378', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:40:27 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"35005065-c3dc-4619-8c1b-c9ad3bbbc786","type":"reading","timestamp":"2016-02-01T20:40:28.194+0000","data":{"gps_longitude":"-94.442245","device_type":"calamp","gps_number_of_satellites":"9","event_timestamp":"2016-02-01T20:40:27.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102094b56afc2bb56afc2bb1712ae17c7b541ce000067e1000008d500900900019affab4f081f00252d0200000000ee0000381d","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"75","gps_altitude":"26593","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"238","accumulator_02":"14365","digital_input_05":"1","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:40:27.000+0000","digital_input_06":"0","gps_speed":"50.577129516899994","raw_payload_size":"64","sequence_number":"2379","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:40:27.000+0000","gps_latitude":"38.7100183","gps_heading":"144","device_name_type":"imei","cellular_rssi":"-85"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:40:27.000+0000
+Lat:= 38.7100183
+Lon:= -94.442245
+Heading:= 144
+Alt:= 26593
+Speed:= 50.577129516899994
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '35005065-c3dc-4619-8c1b-c9ad3bbbc786', '2016-02-01T20:40:28.194+0000', '38.7100183', '-94.442245', '352648068812866', '2016-02-01T20:40:27.000+0000', '144', '50.577129516899994', '26593', '-85', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '0.8', '9', '75', '238', '14365', '2016-02-01T20:40:27.000+0000', '1', '1', '0', '2379', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:40:33 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"291176c9-50c8-48c0-b93f-60e07240d5bb","type":"reading","timestamp":"2016-02-01T20:40:33.700+0000","data":{"gps_longitude":"-94.4556933","device_type":"calamp","gps_number_of_satellites":"11","event_timestamp":"2016-02-01T20:40:11.000+0000","device_port":"3792","raw_payload":"8308352648068831205f01020102009a56afc2ab56afbd651710ddc9c7b3347b0000620d0000000000880b260000ff8f06080f081b03020000000003000030d4","device_name":"352648068831205","event_type":"ignition_transition_on","digital_input_03":"1","event_code":"3","digital_input_02":"1","seq_num_msb":"0","seq_num_lsb":"-102","gps_altitude":"25101","ignition":"1","gps_fix_type":"2","event_parse_method":"binary","accumulator_01":"3","accumulator_02":"12500","digital_input_05":"0","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:40:11.000+0000","digital_input_06":"0","gps_speed":"0.0","raw_payload_size":"64","sequence_number":"154","device_ip":"12.129.110.18","event_timestamp_source":"rtc_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:17:41.000+0000","gps_latitude":"38.698132099999995","gps_heading":"136","device_name_type":"imei","cellular_rssi":"-113"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068831205
+Time:= 2016-02-01T20:17:41.000+0000
+Lat:= 38.698132099999995
+Lon:= -94.4556933
+Heading:= 136
+Alt:= 25101
+Speed:= 0.0
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '291176c9-50c8-48c0-b93f-60e07240d5bb', '2016-02-01T20:40:33.700+0000', '38.698132099999995', '-94.4556933', '352648068831205', '2016-02-01T20:17:41.000+0000', '136', '0.0', '25101', '-113', 'calamp', '1', 'ignition_transition_on', '0', NULL, '3', '1', '1', '2', '0.8', '11', '-102', '3', '12500', '2016-02-01T20:40:11.000+0000', '1', '0', '0', '154', 'imei', '3792', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068831205'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:40:37 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"befd3b3c-1fda-4c2a-a946-0661703988e7","type":"reading","timestamp":"2016-02-01T20:40:38.198+0000","data":{"gps_longitude":"-94.4407568","device_type":"calamp","gps_number_of_satellites":"9","event_timestamp":"2016-02-01T20:40:37.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102094c56afc2c556afc2c517126f13c7b57bf0000068350000086b00910900019affb34f081f00252d0200000000f8000037f5","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"76","gps_altitude":"26677","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"248","accumulator_02":"14325","digital_input_05":"1","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:40:37.000+0000","digital_input_06":"0","gps_speed":"48.2059770495","raw_payload_size":"64","sequence_number":"2380","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:40:37.000+0000","gps_latitude":"38.7084051","gps_heading":"145","device_name_type":"imei","cellular_rssi":"-77"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:40:37.000+0000
+Lat:= 38.7084051
+Lon:= -94.4407568
+Heading:= 145
+Alt:= 26677
+Speed:= 48.2059770495
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( 'befd3b3c-1fda-4c2a-a946-0661703988e7', '2016-02-01T20:40:38.198+0000', '38.7084051', '-94.4407568', '352648068812866', '2016-02-01T20:40:37.000+0000', '145', '48.2059770495', '26677', '-77', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '0.8', '9', '76', '248', '14325', '2016-02-01T20:40:37.000+0000', '1', '1', '0', '2380', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:40:47 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"43607e68-d1a8-4d44-acdd-cfded9ebebe7","type":"reading","timestamp":"2016-02-01T20:40:48.102+0000","data":{"gps_longitude":"-94.43926359999999","device_type":"calamp","gps_number_of_satellites":"10","event_timestamp":"2016-02-01T20:40:47.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102094d56afc2cf56afc2cf171230c2c7b5b64400006558000008d700900a00019affa54f081f00252d020000000102000037dc","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"77","gps_altitude":"25944","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"258","accumulator_02":"14300","digital_input_05":"1","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:40:47.000+0000","digital_input_06":"0","gps_speed":"50.621868242699996","raw_payload_size":"64","sequence_number":"2381","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:40:47.000+0000","gps_latitude":"38.706809799999995","gps_heading":"144","device_name_type":"imei","cellular_rssi":"-91"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:40:47.000+0000
+Lat:= 38.706809799999995
+Lon:= -94.43926359999999
+Heading:= 144
+Alt:= 25944
+Speed:= 50.621868242699996
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '43607e68-d1a8-4d44-acdd-cfded9ebebe7', '2016-02-01T20:40:48.102+0000', '38.706809799999995', '-94.43926359999999', '352648068812866', '2016-02-01T20:40:47.000+0000', '144', '50.621868242699996', '25944', '-91', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '0.8', '10', '77', '258', '14300', '2016-02-01T20:40:47.000+0000', '1', '1', '0', '2381', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:40:57 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"563d6350-afc8-4327-bbc7-00d96dee743a","type":"reading","timestamp":"2016-02-01T20:40:58.098+0000","data":{"gps_longitude":"-94.4376363","device_type":"calamp","gps_number_of_satellites":"9","event_timestamp":"2016-02-01T20:40:57.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102094e56afc2d956afc2d91711edcec7b5f5d50000619d0000098100900900019affa34f081f00252d02000000010c00003840","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"78","gps_altitude":"24989","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"268","accumulator_02":"14400","digital_input_05":"1","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:40:57.000+0000","digital_input_06":"0","gps_speed":"54.4246599357","raw_payload_size":"64","sequence_number":"2382","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:40:57.000+0000","gps_latitude":"38.705095799999995","gps_heading":"144","device_name_type":"imei","cellular_rssi":"-93"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:40:57.000+0000
+Lat:= 38.705095799999995
+Lon:= -94.4376363
+Heading:= 144
+Alt:= 24989
+Speed:= 54.4246599357
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '563d6350-afc8-4327-bbc7-00d96dee743a', '2016-02-01T20:40:58.098+0000', '38.705095799999995', '-94.4376363', '352648068812866', '2016-02-01T20:40:57.000+0000', '144', '54.4246599357', '24989', '-93', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '0.8', '9', '78', '268', '14400', '2016-02-01T20:40:57.000+0000', '1', '1', '0', '2382', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:41:07 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"48b0a315-ca4b-4c4a-80c7-9dddb586a445","type":"reading","timestamp":"2016-02-01T20:41:08.057+0000","data":{"gps_longitude":"-94.43598399999999","device_type":"calamp","gps_number_of_satellites":"10","event_timestamp":"2016-02-01T20:41:07.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102094f56afc2e356afc2e31711a896c7b6366000005fdb0000097b00910a00019affa74f081f00252d020000000116000037dc","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"79","gps_altitude":"24539","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"278","accumulator_02":"14300","digital_input_05":"1","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:41:07.000+0000","digital_input_06":"0","gps_speed":"54.29044375829999","raw_payload_size":"64","sequence_number":"2383","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:41:07.000+0000","gps_latitude":"38.7033238","gps_heading":"145","device_name_type":"imei","cellular_rssi":"-89"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:41:07.000+0000
+Lat:= 38.7033238
+Lon:= -94.43598399999999
+Heading:= 145
+Alt:= 24539
+Speed:= 54.29044375829999
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '48b0a315-ca4b-4c4a-80c7-9dddb586a445', '2016-02-01T20:41:08.057+0000', '38.7033238', '-94.43598399999999', '352648068812866', '2016-02-01T20:41:07.000+0000', '145', '54.29044375829999', '24539', '-89', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '0.8', '10', '79', '278', '14300', '2016-02-01T20:41:07.000+0000', '1', '1', '0', '2383', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:41:09 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"860000e5-3d86-4cde-943e-0f6f26b015e1","type":"reading","timestamp":"2016-02-01T20:41:09.704+0000","data":{"gps_longitude":"-94.4556243","device_type":"calamp","gps_number_of_satellites":"10","event_timestamp":"2016-02-01T20:41:06.000+0000","device_port":"3792","raw_payload":"8308352648068831205f01020102009b56afc2e256afc2e21710d41dc7b3372d0000613d0000009300160a00019aff994f081f00252d02000000003c000033db","device_name":"352648068831205","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"0","seq_num_lsb":"-101","gps_altitude":"24893","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"60","accumulator_02":"13275","digital_input_05":"1","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:41:06.000+0000","digital_input_06":"0","gps_speed":"3.2882963462999997","raw_payload_size":"64","sequence_number":"155","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:41:06.000+0000","gps_latitude":"38.6978845","gps_heading":"22","device_name_type":"imei","cellular_rssi":"-103"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068831205
+Time:= 2016-02-01T20:41:06.000+0000
+Lat:= 38.6978845
+Lon:= -94.4556243
+Heading:= 22
+Alt:= 24893
+Speed:= 3.2882963462999997
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '860000e5-3d86-4cde-943e-0f6f26b015e1', '2016-02-01T20:41:09.704+0000', '38.6978845', '-94.4556243', '352648068831205', '2016-02-01T20:41:06.000+0000', '22', '3.2882963462999997', '24893', '-103', 'calamp', '1', 'ignition_on', '0', NULL, '45', '1', '1', '1', '0.8', '10', '-101', '60', '13275', '2016-02-01T20:41:06.000+0000', '1', '1', '0', '155', 'imei', '3792', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068831205'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:41:15 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"a7e98d72-3060-4e36-b0eb-f27411265b12","type":"reading","timestamp":"2016-02-01T20:41:16.437+0000","data":{"gps_longitude":"-71.5650063","device_type":"calamp","gps_number_of_satellites":"7","event_timestamp":"2016-02-01T20:41:14.000+0000","device_port":"3769","raw_payload":"8308358901049307280f0102010200d656afc2ea56afc2ea18e87820d5580bf100002233000009cc00440700019aff9d4f0a0100252d02000000004c00003719","device_name":"358901049307280","event_type":"ignition_on","digital_input_03":"0","event_code":"45","digital_input_02":"0","seq_num_msb":"0","seq_num_lsb":"-42","gps_altitude":"8755","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"76","accumulator_02":"14105","digital_input_05":"0","gps_hdop":"1.0","digital_input_04":"0","message_type":"2","rtc_timestamp":"2016-02-01T20:41:14.000+0000","digital_input_06":"0","gps_speed":"56.1023621532","raw_payload_size":"64","sequence_number":"214","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:41:14.000+0000","gps_latitude":"41.7888288","gps_heading":"68","device_name_type":"imei","cellular_rssi":"-99"},"headers":{}}
+Parsed data:
+================================================
+Device:= 358901049307280
+Time:= 2016-02-01T20:41:14.000+0000
+Lat:= 41.7888288
+Lon:= -71.5650063
+Heading:= 68
+Alt:= 8755
+Speed:= 56.1023621532
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( 'a7e98d72-3060-4e36-b0eb-f27411265b12', '2016-02-01T20:41:16.437+0000', '41.7888288', '-71.5650063', '358901049307280', '2016-02-01T20:41:14.000+0000', '68', '56.1023621532', '8755', '-99', 'calamp', '1', 'ignition_on', '0', NULL, '45', '0', '0', '1', '1.0', '7', '-42', '76', '14105', '2016-02-01T20:41:14.000+0000', '0', '0', '0', '214', 'imei', '3769', '12.129.110.18', (select deviceid from tbldevice where esn = '358901049307280'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:41:17 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"8c264b4c-8a23-4492-8ffe-26cb461ee298","type":"reading","timestamp":"2016-02-01T20:41:18.096+0000","data":{"gps_longitude":"-94.4343641","device_type":"calamp","gps_number_of_satellites":"10","event_timestamp":"2016-02-01T20:41:17.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102095056afc2ed56afc2ed171165c7c7b675a700005f3600000925008f0a00019affa54f081f00252d0200000001200000381d","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"80","gps_altitude":"24374","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"288","accumulator_02":"14365","digital_input_05":"1","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:41:17.000+0000","digital_input_06":"0","gps_speed":"52.3666785489","raw_payload_size":"64","sequence_number":"2384","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:41:17.000+0000","gps_latitude":"38.7016135","gps_heading":"143","device_name_type":"imei","cellular_rssi":"-91"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:41:17.000+0000
+Lat:= 38.7016135
+Lon:= -94.4343641
+Heading:= 143
+Alt:= 24374
+Speed:= 52.3666785489
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '8c264b4c-8a23-4492-8ffe-26cb461ee298', '2016-02-01T20:41:18.096+0000', '38.7016135', '-94.4343641', '352648068812866', '2016-02-01T20:41:17.000+0000', '143', '52.3666785489', '24374', '-91', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '0.8', '10', '80', '288', '14365', '2016-02-01T20:41:17.000+0000', '1', '1', '0', '2384', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:41:27 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"5a03b0f7-20ed-4b60-a015-4c1d2223aa04","type":"reading","timestamp":"2016-02-01T20:41:28.016+0000","data":{"gps_longitude":"-94.43283249999999","device_type":"calamp","gps_number_of_satellites":"10","event_timestamp":"2016-02-01T20:41:27.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102095156afc2f756afc2f717112699c7b6b17b00005e92000007ee00910a00019affa14f081f00252d02000000012a000037eb","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"81","gps_altitude":"24210","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"298","accumulator_02":"14315","digital_input_05":"1","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:41:27.000+0000","digital_input_06":"0","gps_speed":"45.409806687","raw_payload_size":"64","sequence_number":"2385","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:41:27.000+0000","gps_latitude":"38.6999961","gps_heading":"145","device_name_type":"imei","cellular_rssi":"-95"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:41:27.000+0000
+Lat:= 38.6999961
+Lon:= -94.43283249999999
+Heading:= 145
+Alt:= 24210
+Speed:= 45.409806687
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '5a03b0f7-20ed-4b60-a015-4c1d2223aa04', '2016-02-01T20:41:28.016+0000', '38.6999961', '-94.43283249999999', '352648068812866', '2016-02-01T20:41:27.000+0000', '145', '45.409806687', '24210', '-95', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '0.8', '10', '81', '298', '14315', '2016-02-01T20:41:27.000+0000', '1', '1', '0', '2385', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:41:37 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"5ad8b98c-1519-4a0a-8001-024d330a3503","type":"reading","timestamp":"2016-02-01T20:41:38.016+0000","data":{"gps_longitude":"-94.43209309999999","device_type":"calamp","gps_number_of_satellites":"10","event_timestamp":"2016-02-01T20:41:37.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102095256afc30156afc30117110b7ac7b6ce5d00005d30000001c700840a00019aff9f4f081f00252d020000000134000037dc","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"82","gps_altitude":"23856","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"308","accumulator_02":"14300","digital_input_05":"1","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:41:37.000+0000","digital_input_06":"0","gps_speed":"10.1780601195","raw_payload_size":"64","sequence_number":"2386","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:41:37.000+0000","gps_latitude":"38.6993018","gps_heading":"132","device_name_type":"imei","cellular_rssi":"-97"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:41:37.000+0000
+Lat:= 38.6993018
+Lon:= -94.43209309999999
+Heading:= 132
+Alt:= 23856
+Speed:= 10.1780601195
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '5ad8b98c-1519-4a0a-8001-024d330a3503', '2016-02-01T20:41:38.016+0000', '38.6993018', '-94.43209309999999', '352648068812866', '2016-02-01T20:41:37.000+0000', '132', '10.1780601195', '23856', '-97', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '0.8', '10', '82', '308', '14300', '2016-02-01T20:41:37.000+0000', '1', '1', '0', '2386', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:41:47 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"20874f78-bd5a-4b32-9577-f0b06672c0d5","type":"reading","timestamp":"2016-02-01T20:41:47.992+0000","data":{"gps_longitude":"-94.4315098","device_type":"calamp","gps_number_of_satellites":"10","event_timestamp":"2016-02-01T20:41:47.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102095356afc30b56afc30b171115acc7b6e52600005bb50000027c00410a00019aff9b4f081f00252d02000000013e0000381d","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"83","gps_altitude":"23477","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"318","accumulator_02":"14365","digital_input_05":"1","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:41:47.000+0000","digital_input_06":"0","gps_speed":"14.2269148044","raw_payload_size":"64","sequence_number":"2387","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:41:47.000+0000","gps_latitude":"38.699562799999995","gps_heading":"65","device_name_type":"imei","cellular_rssi":"-101"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:41:47.000+0000
+Lat:= 38.699562799999995
+Lon:= -94.4315098
+Heading:= 65
+Alt:= 23477
+Speed:= 14.2269148044
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '20874f78-bd5a-4b32-9577-f0b06672c0d5', '2016-02-01T20:41:47.992+0000', '38.699562799999995', '-94.4315098', '352648068812866', '2016-02-01T20:41:47.000+0000', '65', '14.2269148044', '23477', '-101', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '0.8', '10', '83', '318', '14365', '2016-02-01T20:41:47.000+0000', '1', '1', '0', '2387', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:41:58 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"62541c07-3e68-42b1-abdf-e8c7ab8578e2","type":"reading","timestamp":"2016-02-01T20:41:58.532+0000","data":{"gps_longitude":"-94.4306386","device_type":"calamp","gps_number_of_satellites":"10","event_timestamp":"2016-02-01T20:41:57.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102095456afc31556afc31517111932c7b7072e00005c0a000002d2005a0a00019affa14f0a1f00252d020000000148000037dc","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"84","gps_altitude":"23562","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"328","accumulator_02":"14300","digital_input_05":"1","gps_hdop":"1.0","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:41:57.000+0000","digital_input_06":"0","gps_speed":"16.1506800138","raw_payload_size":"64","sequence_number":"2388","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:41:57.000+0000","gps_latitude":"38.699653","gps_heading":"90","device_name_type":"imei","cellular_rssi":"-95"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:41:57.000+0000
+Lat:= 38.699653
+Lon:= -94.4306386
+Heading:= 90
+Alt:= 23562
+Speed:= 16.1506800138
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '62541c07-3e68-42b1-abdf-e8c7ab8578e2', '2016-02-01T20:41:58.532+0000', '38.699653', '-94.4306386', '352648068812866', '2016-02-01T20:41:57.000+0000', '90', '16.1506800138', '23562', '-95', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '1.0', '10', '84', '328', '14300', '2016-02-01T20:41:57.000+0000', '1', '1', '0', '2388', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:42:07 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"c11c1bf7-74c6-4f71-896a-fb0b49e2fd40","type":"reading","timestamp":"2016-02-01T20:42:07.936+0000","data":{"gps_longitude":"-94.4304236","device_type":"calamp","gps_number_of_satellites":"9","event_timestamp":"2016-02-01T20:42:07.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102095556afc31f56afc31f1711153ec7b70f9400005d880000000d007c0900019aff994f090f00252d020000000152000037e5","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"85","gps_altitude":"23944","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"338","accumulator_02":"14309","digital_input_05":"0","gps_hdop":"0.9","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:42:07.000+0000","digital_input_06":"0","gps_speed":"0.29080171769999996","raw_payload_size":"64","sequence_number":"2389","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:42:07.000+0000","gps_latitude":"38.699551799999995","gps_heading":"124","device_name_type":"imei","cellular_rssi":"-103"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:42:07.000+0000
+Lat:= 38.699551799999995
+Lon:= -94.4304236
+Heading:= 124
+Alt:= 23944
+Speed:= 0.29080171769999996
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( 'c11c1bf7-74c6-4f71-896a-fb0b49e2fd40', '2016-02-01T20:42:07.936+0000', '38.699551799999995', '-94.4304236', '352648068812866', '2016-02-01T20:42:07.000+0000', '124', '0.29080171769999996', '23944', '-103', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '0.9', '9', '85', '338', '14309', '2016-02-01T20:42:07.000+0000', '1', '0', '0', '2389', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:42:09 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"99dac52f-d43e-417a-be4c-a4bed17fbac3","type":"reading","timestamp":"2016-02-01T20:42:09.713+0000","data":{"gps_longitude":"-94.4589651","device_type":"calamp","gps_number_of_satellites":"10","event_timestamp":"2016-02-01T20:42:06.000+0000","device_port":"3792","raw_payload":"8308352648068831205f01020102009c56afc31e56afc31e171104b8c7b2b4ad00006114000003f5010f0a00019aff954f081f00252d02000000007800003752","device_name":"352648068831205","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"0","seq_num_lsb":"-100","gps_altitude":"24852","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"120","accumulator_02":"14162","digital_input_05":"1","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:42:06.000+0000","digital_input_06":"0","gps_speed":"22.660164617699998","raw_payload_size":"64","sequence_number":"156","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:42:06.000+0000","gps_latitude":"38.6991288","gps_heading":"271","device_name_type":"imei","cellular_rssi":"-107"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068831205
+Time:= 2016-02-01T20:42:06.000+0000
+Lat:= 38.6991288
+Lon:= -94.4589651
+Heading:= 271
+Alt:= 24852
+Speed:= 22.660164617699998
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '99dac52f-d43e-417a-be4c-a4bed17fbac3', '2016-02-01T20:42:09.713+0000', '38.6991288', '-94.4589651', '352648068831205', '2016-02-01T20:42:06.000+0000', '271', '22.660164617699998', '24852', '-107', 'calamp', '1', 'ignition_on', '0', NULL, '45', '1', '1', '1', '0.8', '10', '-100', '120', '14162', '2016-02-01T20:42:06.000+0000', '1', '1', '0', '156', 'imei', '3792', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068831205'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:42:15 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"4485067a-1010-4215-9395-276873982cb9","type":"reading","timestamp":"2016-02-01T20:42:16.432+0000","data":{"gps_longitude":"-71.5492155","device_type":"calamp","gps_number_of_satellites":"8","event_timestamp":"2016-02-01T20:42:14.000+0000","device_port":"3769","raw_payload":"8308358901049307280f0102010200d756afc32656afc32618e8f1e5d55a74c5000029d5000008b600520800019aff9f4f0a0100252d02000000008800003738","device_name":"358901049307280","event_type":"ignition_on","digital_input_03":"0","event_code":"45","digital_input_02":"0","seq_num_msb":"0","seq_num_lsb":"-41","gps_altitude":"10709","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"136","accumulator_02":"14136","digital_input_05":"0","gps_hdop":"1.0","digital_input_04":"0","message_type":"2","rtc_timestamp":"2016-02-01T20:42:14.000+0000","digital_input_06":"0","gps_speed":"49.883679267","raw_payload_size":"64","sequence_number":"215","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:42:14.000+0000","gps_latitude":"41.7919461","gps_heading":"82","device_name_type":"imei","cellular_rssi":"-97"},"headers":{}}
+Parsed data:
+================================================
+Device:= 358901049307280
+Time:= 2016-02-01T20:42:14.000+0000
+Lat:= 41.7919461
+Lon:= -71.5492155
+Heading:= 82
+Alt:= 10709
+Speed:= 49.883679267
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '4485067a-1010-4215-9395-276873982cb9', '2016-02-01T20:42:16.432+0000', '41.7919461', '-71.5492155', '358901049307280', '2016-02-01T20:42:14.000+0000', '82', '49.883679267', '10709', '-97', 'calamp', '1', 'ignition_on', '0', NULL, '45', '0', '0', '1', '1.0', '8', '-41', '136', '14136', '2016-02-01T20:42:14.000+0000', '0', '0', '0', '215', 'imei', '3769', '12.129.110.18', (select deviceid from tbldevice where esn = '358901049307280'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:42:17 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"12982f27-7b59-43ba-9dde-1e4a515673c6","type":"reading","timestamp":"2016-02-01T20:42:18.378+0000","data":{"gps_longitude":"-94.4303668","device_type":"calamp","gps_number_of_satellites":"9","event_timestamp":"2016-02-01T20:42:17.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102095656afc32956afc329171119a1c7b711cc00005e7c0000004b00230900019aff9b4f0b0f00252d02000000015c000037d8","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"86","gps_altitude":"24188","ignition":"1","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"348","accumulator_02":"14296","digital_input_05":"0","gps_hdop":"1.1","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:42:17.000+0000","digital_input_06":"0","gps_speed":"1.6777022174999998","raw_payload_size":"64","sequence_number":"2390","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:42:17.000+0000","gps_latitude":"38.6996641","gps_heading":"35","device_name_type":"imei","cellular_rssi":"-101"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:42:17.000+0000
+Lat:= 38.6996641
+Lon:= -94.4303668
+Heading:= 35
+Alt:= 24188
+Speed:= 1.6777022174999998
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '12982f27-7b59-43ba-9dde-1e4a515673c6', '2016-02-01T20:42:18.378+0000', '38.6996641', '-94.4303668', '352648068812866', '2016-02-01T20:42:17.000+0000', '35', '1.6777022174999998', '24188', '-101', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '1.1', '9', '86', '348', '14296', '2016-02-01T20:42:17.000+0000', '1', '0', '0', '2390', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:42:27 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"a118fa7f-4d9e-4c1f-b2b0-df0d3186a0d3","type":"reading","timestamp":"2016-02-01T20:42:27.951+0000","data":{"gps_longitude":"-94.4303413","device_type":"calamp","gps_number_of_satellites":"10","event_timestamp":"2016-02-01T20:42:27.000+0000","device_port":"49194","raw_payload":"8308352648068812866f01020102095756afc33356afc33317111b7ec7b712cb00005de30000000000230a00019aff9d4f081e00252d020000000166000032f0","device_name":"352648068812866","event_type":"ignition_on","digital_input_03":"1","event_code":"45","digital_input_02":"1","seq_num_msb":"9","seq_num_lsb":"87","gps_altitude":"24035","ignition":"0","gps_fix_type":"1","event_parse_method":"binary","accumulator_01":"358","accumulator_02":"13040","digital_input_05":"1","gps_hdop":"0.8","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:42:27.000+0000","digital_input_06":"0","gps_speed":"0.0","raw_payload_size":"64","sequence_number":"2391","device_ip":"12.129.110.18","event_timestamp_source":"gps_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:42:27.000+0000","gps_latitude":"38.699711799999996","gps_heading":"35","device_name_type":"imei","cellular_rssi":"-99"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648068812866
+Time:= 2016-02-01T20:42:27.000+0000
+Lat:= 38.699711799999996
+Lon:= -94.4303413
+Heading:= 35
+Alt:= 24035
+Speed:= 0.0
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( 'a118fa7f-4d9e-4c1f-b2b0-df0d3186a0d3', '2016-02-01T20:42:27.951+0000', '38.699711799999996', '-94.4303413', '352648068812866', '2016-02-01T20:42:27.000+0000', '35', '0.0', '24035', '-99', 'calamp', '1', 'ignition_on', '9', NULL, '45', '1', '1', '1', '0.8', '10', '87', '358', '13040', '2016-02-01T20:42:27.000+0000', '1', '1', '0', '2391', 'imei', '49194', '12.129.110.18', (select deviceid from tbldevice where esn = '352648068812866'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:42:36 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"85edc829-3918-4bcc-8130-70818796ffcf","type":"reading","timestamp":"2016-02-01T20:42:36.798+0000","data":{"gps_longitude":"-94.4324338","device_type":"calamp","gps_number_of_satellites":"9","event_timestamp":"2016-02-01T20:42:03.000+0000","device_port":"54994","raw_payload":"8308352648069013779f01020102004956afc31b56afbbdc1711493ac7b6c10e00005ddf00000000002e09240000ff8f00090f081b03020000000000000037dc","device_name":"352648069013779","event_type":"ignition_transition_on","digital_input_03":"1","event_code":"3","digital_input_02":"1","seq_num_msb":"0","seq_num_lsb":"73","gps_altitude":"24031","ignition":"1","gps_fix_type":"2","event_parse_method":"binary","accumulator_01":"0","accumulator_02":"14300","digital_input_05":"0","gps_hdop":"0.9","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:42:03.000+0000","digital_input_06":"0","gps_speed":"0.0","raw_payload_size":"64","sequence_number":"73","device_ip":"12.129.110.18","event_timestamp_source":"rtc_timestamp","service_type":"1","gps_timestamp":"2016-02-01T20:11:08.000+0000","gps_latitude":"38.7008826","gps_heading":"46","device_name_type":"imei","cellular_rssi":"-113"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648069013779
+Time:= 2016-02-01T20:11:08.000+0000
+Lat:= 38.7008826
+Lon:= -94.4324338
+Heading:= 46
+Alt:= 24031
+Speed:= 0.0
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '85edc829-3918-4bcc-8130-70818796ffcf', '2016-02-01T20:42:36.798+0000', '38.7008826', '-94.4324338', '352648069013779', '2016-02-01T20:11:08.000+0000', '46', '0.0', '24031', '-113', 'calamp', '1', 'ignition_transition_on', '0', NULL, '3', '1', '1', '2', '0.9', '9', '73', '0', '14300', '2016-02-01T20:42:03.000+0000', '1', '0', '0', '73', 'imei', '54994', '12.129.110.18', (select deviceid from tbldevice where esn = '352648069013779'))
+192.119.176.166 - - [Mon, 01 Feb 2016 20:42:47 GMT] "POST /message HTTP/1.1" 200 2 "-" "Numerex Platform"
+JSON Message: {"id":"48cded1c-f3c2-4737-960b-e4842075229a","type":"reading","timestamp":"2016-02-01T20:42:47.644+0000","data":{"gps_longitude":"-94.4428793","device_type":"calamp","gps_number_of_satellites":"3","event_timestamp":"2016-02-01T20:43:32.000+0000","device_port":"17868","raw_payload":"8308352648069019446f01020102000c56afc37456af80f317128f6fc7b52907000071970000000000c00304019affab4f0b0e082f320200000000710000303a","device_name":"352648069019446","event_type":"ignition_off","digital_input_03":"1","event_code":"50","digital_input_02":"1","seq_num_msb":"0","seq_num_lsb":"12","gps_altitude":"29079","ignition":"0","gps_fix_type":"2","event_parse_method":"binary","accumulator_01":"113","accumulator_02":"12346","digital_input_05":"0","gps_hdop":"1.1","digital_input_04":"1","message_type":"2","rtc_timestamp":"2016-02-01T20:43:32.000+0000","digital_input_06":"0","gps_speed":"0.0","raw_payload_size":"64","sequence_number":"12","device_ip":"12.129.110.18","event_timestamp_source":"rtc_timestamp","service_type":"1","gps_timestamp":"2016-02-01T15:59:47.000+0000","gps_latitude":"38.709233499999996","gps_heading":"192","device_name_type":"imei","cellular_rssi":"-85"},"headers":{}}
+Parsed data:
+================================================
+Device:= 352648069019446
+Time:= 2016-02-01T15:59:47.000+0000
+Lat:= 38.709233499999996
+Lon:= -94.4428793
+Heading:= 192
+Alt:= 29079
+Speed:= 0.0
+
+insert into tblreadingmsg ( msgID, msgTimeStamp, gps_latitude, gps_longitude, device_name, gps_timestamp, gps_heading, gps_speed, 		gps_altitude, cellular_rssi, device_type, service_type, event_type, seq_num_msb, digital_input_01, event_code, digital_input_02, digital_input_03, 		gps_fix_type, gps_hdop, gps_number_of_satellites, seq_num_lsb, accumulator_01, accumulator_02, rtc_timestamp, digital_input_04, digital_input_05, 		digital_input_06,  sequence_number, device_name_type, device_port, device_ip, deviceid ) VALUES 		( '48cded1c-f3c2-4737-960b-e4842075229a', '2016-02-01T20:42:47.644+0000', '38.709233499999996', '-94.4428793', '352648069019446', '2016-02-01T15:59:47.000+0000', '192', '0.0', '29079', '-85', 'calamp', '1', 'ignition_off', '0', NULL, '50', '1', '1', '2', '1.1', '3', '12', '113', '12346', '2016-02-01T20:43:32.000+0000', '1', '0', '0', '12', 'imei', '17868', '12.129.110.18', (select deviceid from tbldevice where esn = '352648069019446'))
